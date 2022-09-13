@@ -22,6 +22,7 @@ impl Default for Parser {
 }
 
 impl Parser {
+    /// Create Parser instance
     pub fn new() -> Self {
         Parser {
             first_parse: true,
@@ -85,6 +86,7 @@ impl Parser {
         }
     }
 
+    /// Parses victron energy protocol packet, if not complete returns VEError::NeedMoreData and stores its state
     pub fn parse_slice(&mut self, data: &[u8]) -> Result<VEDirectParse, VEError> {
         if self.first_parse {
             // skip to first field start as we might have started somewhere in the middle
