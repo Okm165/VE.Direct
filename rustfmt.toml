@@ -1,0 +1,16 @@
+fn_args_layout = "Compressed"
+fn_call_width = 120
+group_imports = "One"
+indent_style = "Block"
+max_width = 130
+
+format_code_in_doc_comments = true
+wrap_comments = true
+comment_width = 130 # same as default max_width
+normalize_doc_attributes = true
+normalize_comments = true
+
+condense_wildcard_suffixes = true
+imports_granularity = "Module"
+reorder_impl_items = true
+use_field_init_shorthand = true
