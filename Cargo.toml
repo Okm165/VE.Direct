@@ -6,6 +6,7 @@ authors = ["Bartosz Nowak"]
 description = "Victron Energy Direct protocol parser and units converter"
 license = "MIT"
 repository = "https://github.com/Okm165/ve_direct"
+documentation = "https://docs.rs/ve_direct/"
 keywords = ["parser", "converter", "translator"]
 categories = ["parsing", "value-formatting", "text-processing", "development-tools"]
 
