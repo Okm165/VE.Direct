@@ -1,3 +1,4 @@
+#![cfg(not(doctest))]
 //! # Example
 //! ```
 //! use tokio::io::AsyncReadExt;

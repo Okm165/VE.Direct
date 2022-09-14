@@ -8,7 +8,9 @@ fn pipe_line1() {
         .as_bytes();
     let mut parser = Parser::new();
     let parse = parser.parse_slice(data).expect("parsing failed");
-    let conv = convert(parse);
+    println!("{:?}", parse);
+    let conv = convert(parse).unwrap();
+    println!("{:?}", conv);
     assert_eq!(conv.PID.unwrap(), "0xA053".to_string());
     assert_eq!(conv.FW.unwrap(), "159".to_string());
     assert_eq!(conv.SER.unwrap(), "HQ2132QY2KR".to_string());
@@ -37,7 +39,7 @@ fn pipe_line2() {
 
     let mut parser = Parser::new();
     let parse = parser.parse_slice(vec_data.as_slice()).expect("parsing failed");
-    let conv = convert(parse);
+    let conv = convert(parse).unwrap();
     assert_eq!(conv.PID.unwrap(), "0x203".to_string());
     assert_eq!(conv.V.unwrap(), 26.201);
     assert_eq!(conv.I.unwrap(), 0.0);
@@ -50,4 +52,5 @@ fn pipe_line2() {
     assert_eq!(conv.AR.unwrap(), [AlarmReason::None]);
     assert_eq!(conv.BMV.unwrap(), "700".to_string());
     assert_eq!(conv.FW.unwrap(), "0307".to_string());
+    assert_eq!(conv.Checksum.unwrap(), 0xd8);
 }

@@ -151,14 +151,14 @@ fn convert_test() {
     map.insert("AC_OUT_I".to_string(), "12488".as_bytes().to_vec());
     map.insert("AC_OUT_S".to_string(), "12488".as_bytes().to_vec());
     map.insert("WARN".to_string(), "32".as_bytes().to_vec());
-    map.insert("Calc_sum".to_string(), "35".as_bytes().to_vec());
-    map.insert("Checksum".to_string(), "255".as_bytes().to_vec());
+    map.insert("Calc_sum".to_string(), "a".as_bytes().to_vec());
+    map.insert("Checksum".to_string(), "u".as_bytes().to_vec());
     map.insert("BLE".to_string(), "0".as_bytes().to_vec());
     map.insert("CAP_BLE".to_string(), "2".as_bytes().to_vec());
     map.insert("Time".to_string(), "12344556789".as_bytes().to_vec());
     map.insert("Bleble".to_string(), "ola".as_bytes().to_vec());
 
-    let conv = convert(map);
+    let conv = convert(map).unwrap();
 
     assert_eq!(conv.V.unwrap(), 12.48812);
     assert_eq!(conv.VS.unwrap(), 12.48812);
@@ -212,8 +212,8 @@ fn convert_test() {
     assert_eq!(conv.AC_OUT_I.unwrap(), 1248.8);
     assert_eq!(conv.AC_OUT_S.unwrap(), 12488.0);
     assert_eq!(conv.WARN.unwrap(), vec![WarningReason::LowTemperature]);
-    assert_eq!(conv.Calc_sum.unwrap(), 35_u8);
-    assert_eq!(conv.Checksum.unwrap(), 255_u8);
+    assert_eq!(conv.Calc_sum.unwrap(), 97);
+    assert_eq!(conv.Checksum.unwrap(), 117);
     assert_eq!(conv.BLE.unwrap(), BluetoothStatus::Off);
     assert_eq!(conv.CAP_BLE.unwrap(), BluetoothCapBle::BLE_Switching_Off_Is_Permanent);
     assert_eq!(conv.Time.unwrap(), 12344556789);
