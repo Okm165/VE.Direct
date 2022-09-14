@@ -1,13 +1,13 @@
 [package]
 edition = "2021"
 name = "ve_direct"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Bartosz Nowak"]
 description = "Victron Energy Direct protocol parser and units converter"
 license = "MIT"
 repository = "https://github.com/Okm165/ve_direct"
 keywords = ["parser", "converter", "translator"]
-categories = ["parser", "converter", "translator"]
+categories = ["parsing", "value-formatting", "text-processing", "development-tools"]
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
