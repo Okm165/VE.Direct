@@ -1,3 +1,13 @@
+//! # Example
+//! ```
+//! fn main() {
+//!     let mut parser = Parser::new();
+//!     if let Ok(parsed) = parser.parse_slice(&buf) {
+//!         println!("{:?}", parsed);
+//!     }
+//! }
+//! ```
+
 pub mod models;
 
 #[cfg(test)]

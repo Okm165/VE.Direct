@@ -1,3 +1,11 @@
+//! # Example
+//! ```
+//! fn main() {
+//!     // parsed variable from parser output
+//!     let converted = convert(parsed).unwrap();
+//! }
+//! ```
+
 pub mod models;
 use self::models::*;
 use crate::parser::VEDirectParse;
