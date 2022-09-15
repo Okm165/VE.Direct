@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "ve_direct"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Bartosz Nowak"]
 description = "Victron Energy Direct protocol parser and units converter"
 license = "MIT"
