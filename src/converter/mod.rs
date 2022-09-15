@@ -20,7 +20,7 @@ mod tests;
 macro_rules! convert {
     ( $map: ident, $disc: path, $fun: ident) => {{
         if let Some((_key, value)) = $map.remove_entry(&$disc.to_string()) {
-            Some($fun(String::from_utf8_lossy(value.as_slice()).to_string())?)
+            $fun(String::from_utf8_lossy(value.as_slice()).to_string()).ok()
         } else {
             None
         }
