@@ -3,6 +3,10 @@
 //! fn main() {
 //!     // parsed variable from parser output
 //!     let converted = convert(parsed).unwrap();
+//!     // proceed when packet has calculated checksum eq to 0 (it is healthy)
+//!     if converted.Calc_sum.unwrap() == 0 {
+//!         // DO WORK...
+//!     }
 //! }
 //! ```
 
