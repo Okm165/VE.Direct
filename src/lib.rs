@@ -21,7 +21,7 @@
 //!     // initialize buffer and parser
 //!     let mut buf: Vec<u8> = vec![0; 2048];
 //!     let mut parser = Parser::new();
-//! 
+//!
 //!     loop{
 //!         // read loop
 //!         if let Ok(r) = port.read(&mut buf).await {
